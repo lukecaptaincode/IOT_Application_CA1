@@ -1,0 +1,7 @@
+{
+  "name": "ANDROID_SensorController",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

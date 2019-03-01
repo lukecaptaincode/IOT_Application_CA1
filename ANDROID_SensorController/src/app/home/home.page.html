@@ -1,0 +1,62 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>
+            Sensor Controller
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-item>
+        <ion-label>LED</ion-label>
+        <ion-toggle id="led-toggle" (click)="toggleSensor('/led/')"></ion-toggle>
+    </ion-item>
+    <ion-item>
+        <ion-label>Buzzer</ion-label>
+        <ion-toggle id="buzzer-toggle" (click)="toggleSensor('/buzzer/')"></ion-toggle>
+    </ion-item>
+    <ion-item>
+        <ion-label>Light Sensor</ion-label>
+        <!-- Calls the toggle function and passes the ref to toggle the specific sensor -->
+        <ion-toggle id="lightsensor-toggle" (click)="toggleSensor('/lightsensor/')"></ion-toggle>
+        <!-- Gets the delay on the sensor data push from the bound variable -->
+        <ion-label>Data Push Delay: {{sensorDelays[0]}} seconds</ion-label>
+        <!-- Sets the ranges model to the sensor delay varible via data binding and calls
+            the changeSensorDelay method on change-->
+        <ion-range [min]="1" [max]="60" [step]=1 [snaps]="true" [(ngModel)]="sensorDelays[0]"
+                   (ionChange)="changeSensorDelay('/lightsensor/',sensorDelays[0])">
+            <ion-label slot="start">1</ion-label>
+            <ion-label slot="end">60</ion-label>
+        </ion-range>
+    </ion-item>
+    <ion-item>
+        <ion-label>Sound Sensor</ion-label>
+        <ion-toggle id="soundsensor-toggle" (click)="toggleSensor('/soundsensor/')"></ion-toggle>
+        <ion-label>Data Push Delay: {{sensorDelays[1]}} seconds</ion-label>
+        <ion-range [min]="1" [max]="60" [step]=1 [snaps]="true" [(ngModel)]="sensorDelays[1]"
+                   (ionChange)="changeSensorDelay('/soundsensor/',sensorDelays[1])">
+            <ion-label slot="start">1</ion-label>
+            <ion-label slot="end">60</ion-label>
+        </ion-range>
+    </ion-item>
+    <ion-item>
+        <ion-label>Temp Sensor</ion-label>
+        <ion-toggle id="tempsensor-toggle" (click)="toggleSensor('/tempsensor/')"></ion-toggle>
+        <ion-label>Data Push Delay: {{sensorDelays[2]}} seconds</ion-label>
+        <ion-range [min]="1" [max]="60" [step]=1 [snaps]="true" [(ngModel)]="sensorDelays[2]"
+                   (ionChange)="changeSensorDelay('/tempsensor/',sensorDelays[2])">
+            <ion-label slot="start">1</ion-label>
+            <ion-label slot="end">60</ion-label>
+        </ion-range>
+    </ion-item>
+    <ion-item>
+        <ion-label>Range Sensor</ion-label>
+        <ion-toggle id="rangesensor-toggle" (click)="toggleSensor('/rangesensor/')"></ion-toggle>
+        <ion-label>Data Push Delay: {{sensorDelays[3]}} seconds</ion-label>
+        <ion-range [min]="1" [max]="60" [step]=1 [snaps]="true" [(ngModel)]="sensorDelays[3]"
+                   (ionChange)="changeSensorDelay('/rangesensor/',sensorDelays[3])">
+            <ion-label slot="start">1</ion-label>
+            <ion-label slot="end">60</ion-label>
+        </ion-range>
+    </ion-item>
+</ion-content>

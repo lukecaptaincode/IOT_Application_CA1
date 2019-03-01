@@ -1,0 +1,12 @@
+# Created by .ignore support plugin (hsz.mobi)
+/.idea/
+/ANDROID_SensorController/plugins/
+/ANDROID_SensorController/resources/
+/ANDROID_SensorController/package-lock.json
+/JAVA_SensorDataConsumer/.idea/
+/JAVA_SensorDataConsumer/target/
+/JAVA_SensorDataConsumer/out/
+/JAVA_SensorDataConsumer/src/main/resources/iot-applications-ca1-firebase-adminsdk-buwd0-423ae91d3b.json
+/RPI_SensorDataGatherer/iot-applications-ca1-firebase-adminsdk-buwd0-423ae91d3b.json
+/RPI_SensorDataGatherer/.idea/
+/RPI_SensorDataGatherer/Pipfile.lock
